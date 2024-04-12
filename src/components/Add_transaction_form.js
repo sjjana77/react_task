@@ -62,16 +62,45 @@ const Add_transaction_form = () => {
         <TextField
           fullWidth
           select
-          label="Category"
-          name="category"
+          label="Transaction Type"
+          name="transaction_type"
           value={formData.category}
           onChange={handleChange}
           margin="normal"
           variant="outlined"
         >
-          <MenuItem value="category1">Category 1</MenuItem>
-          <MenuItem value="category2">Category 2</MenuItem>
-          <MenuItem value="category3">Category 3</MenuItem>
+          <MenuItem value="expense">Expense</MenuItem>
+          <MenuItem value="income">Income</MenuItem>
+        </TextField>
+        <TextField
+          fullWidth
+          select
+          label="Mode of Payment"
+          name="mode"
+          value={formData.category}
+          onChange={handleChange}
+          margin="normal"
+          variant="outlined"
+        >
+          <MenuItem value="upi">UPI</MenuItem>
+          <MenuItem value="cash">Cash</MenuItem>
+          <MenuItem value="bank">Bank Transfer</MenuItem>
+          <MenuItem value="cheque">Cheque</MenuItem>
+        </TextField>
+        <TextField
+          fullWidth
+          select
+          label="Source"
+          name="source"
+          value={formData.category}
+          onChange={handleChange}
+          margin="normal"
+          variant="outlined"
+        >
+          <MenuItem value="upi">UPI</MenuItem>
+          <MenuItem value="cash">Cash</MenuItem>
+          <MenuItem value="bank">Bank Transfer</MenuItem>
+          <MenuItem value="cheque">Cheque</MenuItem>
         </TextField>
         <Button type="submit" variant="contained" color="primary" style={{ marginTop: 16 }}>
           Submit
